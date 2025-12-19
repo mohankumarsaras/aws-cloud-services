@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" version="29.2.7" pages="2">
   <diagram name="SaaS Application – Multi-AZ Architecture" id="yrdXZo_UD05G_ejRrizS">
-    <mxGraphModel dx="698" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -112,6 +112,126 @@
           <mxGeometry height="30" width="120" x="780" y="330" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-55" edge="1" parent="NTwI9TM9F-H1z3h7Cl0l-3" source="NTwI9TM9F-H1z3h7Cl0l-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="CI/CD Pipeline – GitHub + Jenkins + AWS" id="7oQThjuaE5Uf_53l-ONp">
+    <mxGraphModel dx="698" dy="421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-0" />
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-1" parent="0Wi-XerCMe6Pl-UJGQMi-0" />
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-2" parent="0Wi-XerCMe6Pl-UJGQMi-1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;shadow=1;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;fontColor=#000000;fontStyle=1;fillColor=#FF9933;glass=0;arcSize=0;" value="&lt;p data-start=&quot;641&quot; data-end=&quot;711&quot;&gt;&lt;span data-start=&quot;662&quot; data-end=&quot;711&quot; style=&quot;font-weight: normal;&quot;&gt;&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot; style=&quot;font-size: 14px; color: rgb(0, 0, 0);&quot;&gt;Multi-AZ SaaS Application Architecture on AWS&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p data-start=&quot;713&quot; data-end=&quot;749&quot;&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="40" width="321.5" x="438.5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-3" parent="0Wi-XerCMe6Pl-UJGQMi-1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud_alt;strokeColor=#232F3E;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;AWS Cloud&lt;/font&gt;" vertex="1">
+          <mxGeometry height="680" width="1040" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-4" parent="0Wi-XerCMe6Pl-UJGQMi-3" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_region;strokeColor=#00A4A6;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=1;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;Region - us-east-1&lt;/font&gt;" vertex="1">
+          <mxGeometry height="600" width="960" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-5" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;strokeColor=#8C4FFF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;VPC - (10.0.0.0/16)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="680" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-6" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="fillColor=default;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=1;fontColor=#000000;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;Availability Zone - B&lt;/font&gt;" vertex="1">
+          <mxGeometry height="200" width="400" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-7" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="fillColor=default;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=1;fontColor=#000000;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;shadow=0;" value="&lt;font&gt;Availability Zone - A&lt;/font&gt;" vertex="1">
+          <mxGeometry height="200" width="400" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-8" edge="1" parent="0Wi-XerCMe6Pl-UJGQMi-5" source="0Wi-XerCMe6Pl-UJGQMi-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;" target="0Wi-XerCMe6Pl-UJGQMi-13" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="170" />
+              <mxPoint x="440" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-9" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#7AA116;fillColor=#F2F6E8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Public subnet" vertex="1">
+          <mxGeometry height="120" width="120" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-10" parent="0Wi-XerCMe6Pl-UJGQMi-9" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-11" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
+          <mxGeometry height="120" width="120" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-12" parent="0Wi-XerCMe6Pl-UJGQMi-11" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.auto_scaling2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-13" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
+          <mxGeometry height="200" width="160" x="480" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-14" parent="0Wi-XerCMe6Pl-UJGQMi-13" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="60" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-15" parent="0Wi-XerCMe6Pl-UJGQMi-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;RDS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="20" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-16" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;ALB&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-17" edge="1" parent="0Wi-XerCMe6Pl-UJGQMi-5" source="0Wi-XerCMe6Pl-UJGQMi-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="350" />
+            </Array>
+            <mxPoint x="200" y="340" as="sourcePoint" />
+            <mxPoint x="480" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-18" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
+          <mxGeometry height="120" width="120" x="280" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-19" parent="0Wi-XerCMe6Pl-UJGQMi-18" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.auto_scaling2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-20" parent="0Wi-XerCMe6Pl-UJGQMi-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;EC2 (Auto Scaling)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-21" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#7AA116;fillColor=#F2F6E8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Public subnet" vertex="1">
+          <mxGeometry height="120" width="120" x="80" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-22" parent="0Wi-XerCMe6Pl-UJGQMi-21" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-23" parent="0Wi-XerCMe6Pl-UJGQMi-21" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;ALB&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-24" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;EC2 (Auto Scaling)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="280" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-25" edge="1" parent="0Wi-XerCMe6Pl-UJGQMi-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.006;entryY=0.929;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;flowAnimation=1;" target="0Wi-XerCMe6Pl-UJGQMi-26" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="379.64" as="sourcePoint" />
+            <mxPoint x="730" y="379.64" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-26" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="rounded=0;whiteSpace=wrap;html=1;glass=0;shadow=0;" value="" vertex="1">
+          <mxGeometry height="280" width="160" x="760" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-27" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="820" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-28" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="820" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-29" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="820" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-30" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;Cloud Watch&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="780" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-31" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;S3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="780" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-32" parent="0Wi-XerCMe6Pl-UJGQMi-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;IAM&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="120" x="780" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="0Wi-XerCMe6Pl-UJGQMi-33" edge="1" parent="0Wi-XerCMe6Pl-UJGQMi-4" source="0Wi-XerCMe6Pl-UJGQMi-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;" value="">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="760" y="180" as="targetPoint" />
           </mxGeometry>
