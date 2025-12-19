@@ -14,7 +14,7 @@
           <mxGeometry height="600" width="960" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-4" parent="NTwI9TM9F-H1z3h7Cl0l-3" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc2;strokeColor=#8C4FFF;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;VPC - (10.0.0.0/16)&lt;/font&gt;" vertex="1">
-          <mxGeometry height="520" width="880" x="40" y="40" as="geometry" />
+          <mxGeometry height="520" width="680" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-8" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="fillColor=none;strokeColor=#147EBA;dashed=1;verticalAlign=top;fontStyle=1;fontColor=#000000;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans&quot;&gt;Availability Zone - B&lt;/font&gt;" vertex="1">
           <mxGeometry height="200" width="400" x="40" y="280" as="geometry" />
@@ -25,8 +25,8 @@
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-34" edge="1" parent="NTwI9TM9F-H1z3h7Cl0l-4" source="NTwI9TM9F-H1z3h7Cl0l-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;" target="NTwI9TM9F-H1z3h7Cl0l-18" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="450" y="140" />
-              <mxPoint x="450" y="140" />
+              <mxPoint x="440" y="170" />
+              <mxPoint x="440" y="170" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -34,39 +34,40 @@
           <mxGeometry height="120" width="120" x="80" y="80" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-15" parent="NTwI9TM9F-H1z3h7Cl0l-9" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="35" y="36" as="geometry" />
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-10" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
           <mxGeometry height="120" width="120" x="280" y="80" as="geometry" />
         </mxCell>
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-13" parent="NTwI9TM9F-H1z3h7Cl0l-10" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.auto_scaling2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
+        </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-18" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
-          <mxGeometry height="440" width="160" x="480" y="40" as="geometry" />
+          <mxGeometry height="200" width="160" x="480" y="160" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-20" parent="NTwI9TM9F-H1z3h7Cl0l-18" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#C925D1;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.rds;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="55" y="195" as="geometry" />
+          <mxGeometry height="40" width="40" x="60" y="85" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-28" parent="NTwI9TM9F-H1z3h7Cl0l-18" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;RDS&lt;/b&gt;" vertex="1">
-          <mxGeometry height="30" width="120" x="20" y="245" as="geometry" />
+          <mxGeometry height="30" width="120" x="20" y="125" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-26" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;ALB&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="120" x="80" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-13" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.auto_scaling2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="315" y="120" as="geometry" />
-        </mxCell>
-        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-37" edge="1" parent="NTwI9TM9F-H1z3h7Cl0l-4" source="NTwI9TM9F-H1z3h7Cl0l-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;" value="">
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-37" edge="1" parent="NTwI9TM9F-H1z3h7Cl0l-4" source="NTwI9TM9F-H1z3h7Cl0l-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="480" y="380" />
+              <mxPoint x="480" y="350" />
             </Array>
-            <mxPoint x="480" y="380" as="targetPoint" />
+            <mxPoint x="200" y="340" as="sourcePoint" />
+            <mxPoint x="480" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-12" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#000000;dashed=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="Private subnet" vertex="1">
           <mxGeometry height="120" width="120" x="280" y="320" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-14" parent="NTwI9TM9F-H1z3h7Cl0l-12" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.auto_scaling2;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="35" y="35" as="geometry" />
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-25" parent="NTwI9TM9F-H1z3h7Cl0l-12" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;EC2 (Auto Scaling)&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="120" y="90" as="geometry" />
@@ -75,13 +76,27 @@
           <mxGeometry height="120" width="120" x="80" y="320" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-16" parent="NTwI9TM9F-H1z3h7Cl0l-11" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#000000;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_load_balancing;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="" vertex="1">
-          <mxGeometry height="50" width="50" x="35" y="35" as="geometry" />
+          <mxGeometry height="40" width="40" x="40" y="40" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-27" parent="NTwI9TM9F-H1z3h7Cl0l-11" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;ALB&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="120" y="90" as="geometry" />
         </mxCell>
         <mxCell id="NTwI9TM9F-H1z3h7Cl0l-33" parent="NTwI9TM9F-H1z3h7Cl0l-4" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Nunito Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNunito%2BSans;" value="&lt;b&gt;EC2 (Auto Scaling)&lt;/b&gt;" vertex="1">
           <mxGeometry height="30" width="120" x="280" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-48" parent="NTwI9TM9F-H1z3h7Cl0l-3" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="280" width="160" x="760" y="160" as="geometry">
+            <mxRectangle height="40" width="50" x="760" y="160" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-39" parent="NTwI9TM9F-H1z3h7Cl0l-48" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-44" parent="NTwI9TM9F-H1z3h7Cl0l-48" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.identity_and_access_management;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="60" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="NTwI9TM9F-H1z3h7Cl0l-38" parent="NTwI9TM9F-H1z3h7Cl0l-48" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="60" y="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
