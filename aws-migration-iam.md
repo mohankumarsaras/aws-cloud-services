@@ -1,6 +1,6 @@
 # AWS Migration - Organization, Architecture, and IAM Isolation
 
-This document outlines the AWS migration strategy for the MintoCred API and UI. It explicitly defines the account-level isolation under AWS Organizations, VPC isolation for each environment, and the specific IAM users, roles, and policies required to manage these resources securely.
+This document outlines the AWS migration strategy for the MintoCred API and UI. It explicitly defines the account-level isolation under AWS Organizations, VPC isolation for each environment, and the specific IAM users, roles, and resource-scoped policies required to manage these resources securely.
 
 ## 1. AWS Organizations & Account Structure
 
@@ -8,64 +8,49 @@ To ensure maximum security and billing separation, the infrastructure is managed
 
 | Account Level | Account Name | Purpose | Authorized Users |
 | :--- | :--- | :--- | :--- |
-| **Management** | `MintoCred-Org-Root` | Billing, SCP (Service Control Policies) management, and creating child accounts. Hosts no workloads. | Root User, Organization Admins |
+| **Management** | `MintoCred-Org-Root` | Billing, SCP management, and creating child accounts. | Root User, Organization Admins |
 | **Workload OU** | `MintoCred-Dev` | Hosts the completely private Development environment. | Dev Admins, Developers |
 | **Workload OU** | `MintoCred-Staging` | Hosts the completely private Staging/QA environment. | Staging Admins, QA |
 | **Workload OU** | `MintoCred-Production` | Hosts the publicly accessible Production environment. | Prod Admins, SREs |
 
 ## 2. Environment & VPC Resource Isolation
 
-Each account contains a single, isolated VPC. The networking rules dictate how resources are exposed.
+Each account contains a single, isolated VPC.
 
 ### Dev and Staging Accounts (`MintoCred-Dev`, `MintoCred-Staging`)
-- **VPC Design**: Strictly Private.
-- **Subnets**: All resources (ECS Tasks, EC2 Databases, internal ALBs) reside in **Private Subnets**.
-- **Access**: There are **no public IP addresses** and no Internet Gateways for inbound traffic. Developers access the API and UI internally via **AWS Client VPN** or a secure **Bastion Host** (EC2) residing in a public subnet only for SSH/Tunneling.
+- **VPC Design**: Strictly Private. No public endpoints.
+- **Access**: Developers access the API and UI internally via **AWS Client VPN** or a secure **Bastion Host**.
 
 ### Production Account (`MintoCred-Production`)
 - **VPC Design**: Public/Private Hybrid.
-- **Private Subnets**: The backend logic (ECS Tasks) and the Database (EC2) are strictly placed in Private Subnets, isolated from direct internet access.
-- **Public Subnets**: Reserved exclusively for the **Application Load Balancer (ALB)** and **NAT Gateways**.
-- **Access**: The ALB receives public HTTPS traffic and securely routes it to the private ECS tasks. The UI is hosted on S3 and exposed globally via a public **CloudFront CDN**.
+- **Private Subnets**: Backend logic (ECS Tasks) and Database (EC2) are strictly placed in Private Subnets.
+- **Public Subnets**: Reserved exclusively for the **Application Load Balancer (ALB)** and **NAT Gateways**. The UI is hosted on S3 and exposed globally via a public **CloudFront CDN**.
 
-## 3. IAM Users, Roles, and Accessed Resources
+## 3. Accessed Resource Summary (By Account Level)
 
-Each account requires specific IAM identities with scoped permissions. Cross-account access is denied by default.
+To adhere to the principle of least privilege, IAM policies must target specific resources rather than using the wildcard `*`. The table below defines the naming conventions and ARNs for the resources across all workload accounts (Dev, Staging, Prod).
 
-### A. Management Account
-- **User**: `OrganizationAdmin`
-- **Accessed Resources**: AWS Organizations, Billing, AWS SSO (Identity Center).
-- **Policies Needed**: `AWSOrganizationsFullAccess`, `Billing`.
+*(Note: Replace `REGION` with your AWS region, e.g., `us-east-1`, and `ACCOUNT_ID` with the respective 12-digit AWS account ID).*
 
-### B. Dev & Staging Accounts
-- **User/Role**: `EnvironmentAdmin` (e.g., `DevAdmin`)
-- **Accessed Resources**: VPC, EC2 (Database & Bastion), ECS, ECR, internal ALBs, S3 (UI Bucket), Route 53 (Private Hosted Zone), ACM.
-- **Policies Needed**: See Section 4 (Custom Admin Policy). CloudFront permissions can be restricted since Dev/Staging UIs are typically accessed directly via S3/ALB over VPN, but if CloudFront is used, it requires WAF IP-restrictions.
+| Service | Resource Name / Convention | Target ARN for IAM JSON |
+| :--- | :--- | :--- |
+| **VPC / Networking** | `mintocred-vpc` | `arn:aws:ec2:REGION:ACCOUNT_ID:vpc/*` (plus subnet/route table ARNs) |
+| **EC2 (Database/Bastion)** | `mintocred-db-instance` | `arn:aws:ec2:REGION:ACCOUNT_ID:instance/*` |
+| **ECS Cluster** | `mintocred-cluster` | `arn:aws:ecs:REGION:ACCOUNT_ID:cluster/mintocred-*` |
+| **ECS Service / Task** | `mintocred-api-service` | `arn:aws:ecs:REGION:ACCOUNT_ID:service/mintocred-*/*` <br> `arn:aws:ecs:REGION:ACCOUNT_ID:task/mintocred-*/*` |
+| **ECR Repository** | `mintocred-api-repo` | `arn:aws:ecr:REGION:ACCOUNT_ID:repository/mintocred-*` |
+| **S3 (UI Bucket)** | `mintocred-[env]-ui-bucket` | `arn:aws:s3:::mintocred-*-ui-bucket` <br> `arn:aws:s3:::mintocred-*-ui-bucket/*` |
+| **CloudFront** | `mintocred-ui-cdn` | `arn:aws:cloudfront::ACCOUNT_ID:distribution/*` |
+| **Route 53** | `mintocred.com` Zones | `arn:aws:route53:::hostedzone/*` |
+| **IAM Execution Roles** | `ecsTaskExecutionRole` | `arn:aws:iam::ACCOUNT_ID:role/mintocred-*` |
 
-### C. Production Account
-- **User/Role**: `ProdAdmin`
-- **Accessed Resources**: VPC, EC2 (Database), ECS, ECR, Public ALBs, S3 (UI Bucket), CloudFront (Public CDN), Route 53 (Public Hosted Zone), ACM, WAF.
-- **Policies Needed**: See Section 4. Stricter limits can be applied to prevent manual deletion of Production EC2 databases without MFA.
+## 4. Resource-Scoped IAM Policies
 
-### D. CI/CD Deployment Role (Across Dev/Staging/Prod)
-- **Role**: `GitHubActionsDeployRole` (Assuming GitHub Actions is used for CI/CD).
-- **Accessed Resources**: ECR (Push images), ECS (Update Service), S3 (Upload UI files), CloudFront (Create Invalidation).
-- **Policies Needed**: Highly scoped custom policy (no VPC/EC2 creation rights).
+The following JSON policies limit the Environment Admins and CI/CD pipelines to exactly the resources defined above, preventing them from interacting with or deleting unrelated AWS resources.
 
-## 4. List of Services and Necessary IAM Policies
+### A. JSON Policy: `MintoCredEnvironmentAdmin`
 
-The following details the services used per account and the exact JSON policy required for the `EnvironmentAdmin` (Dev/Staging/Prod Admin) to build and manage the infrastructure.
-
-### Services Used
-1. **Amazon EC2 & VPC**: For Database hosting, Bastion Hosts, and networking infrastructure.
-2. **Amazon ECS & ECR**: For running and storing the containerized FastAPI backend.
-3. **Elastic Load Balancing (ELB)**: Internal ALBs for Dev/Staging; Public ALB for Prod.
-4. **Amazon S3 & CloudFront**: For storing and serving the static React/Vue frontend UI.
-5. **Amazon Route 53 & ACM**: For DNS routing and SSL certificate provisioning.
-
-### JSON Policy: `MintoCredEnvironmentAdmin`
-
-*This policy should be attached to the Admin user in the respective Dev, Staging, or Prod account.*
+*This policy should be attached to the Admin user in the respective Dev, Staging, or Prod account. It replaces broad `*` access with resource-specific ARNs.*
 
 ```json
 {
@@ -75,24 +60,43 @@ The following details the services used per account and the exact JSON policy re
             "Sid": "VPCandEC2Management",
             "Effect": "Allow",
             "Action": [
-                "ec2:*",
-                "elasticloadbalancing:*"
+                "ec2:RunInstances",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:TerminateInstances",
+                "ec2:Describe*",
+                "ec2:CreateVpc",
+                "ec2:CreateSubnet"
             ],
-            "Resource": "*"
+            "Resource": [
+                "arn:aws:ec2:REGION:ACCOUNT_ID:instance/*",
+                "arn:aws:ec2:REGION:ACCOUNT_ID:vpc/*",
+                "arn:aws:ec2:REGION:ACCOUNT_ID:subnet/*",
+                "arn:aws:ec2:REGION:ACCOUNT_ID:security-group/*",
+                "arn:aws:ec2:REGION:ACCOUNT_ID:volume/*"
+            ]
         },
         {
             "Sid": "ContainerServicesManagement",
             "Effect": "Allow",
             "Action": [
-                "ecs:*",
-                "ecr:*",
-                "application-autoscaling:*",
-                "logs:CreateLogGroup",
-                "logs:CreateLogStream",
-                "logs:PutLogEvents",
-                "logs:DescribeLogGroups"
+                "ecs:CreateCluster",
+                "ecs:DeleteCluster",
+                "ecs:CreateService",
+                "ecs:UpdateService",
+                "ecs:DeleteService",
+                "ecs:RegisterTaskDefinition",
+                "ecs:Describe*",
+                "ecr:CreateRepository",
+                "ecr:DeleteRepository",
+                "ecr:*"
             ],
-            "Resource": "*"
+            "Resource": [
+                "arn:aws:ecs:REGION:ACCOUNT_ID:cluster/mintocred-*",
+                "arn:aws:ecs:REGION:ACCOUNT_ID:service/mintocred-*/*",
+                "arn:aws:ecs:REGION:ACCOUNT_ID:task-definition/mintocred-*",
+                "arn:aws:ecr:REGION:ACCOUNT_ID:repository/mintocred-*"
+            ]
         },
         {
             "Sid": "FrontendHostingManagement",
@@ -101,40 +105,28 @@ The following details the services used per account and the exact JSON policy re
                 "s3:*",
                 "cloudfront:*"
             ],
-            "Resource": "*"
+            "Resource": [
+                "arn:aws:s3:::mintocred-*-ui-bucket",
+                "arn:aws:s3:::mintocred-*-ui-bucket/*",
+                "arn:aws:cloudfront::ACCOUNT_ID:distribution/*"
+            ]
         },
         {
-            "Sid": "DNSAndSSLManagement",
+            "Sid": "IAMRolePassForECS",
             "Effect": "Allow",
             "Action": [
-                "route53:*",
-                "route53domains:*",
-                "acm:*"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "IAMRolePassForECSAndCloudFront",
-            "Effect": "Allow",
-            "Action": [
-                "iam:CreateRole",
-                "iam:DeleteRole",
-                "iam:GetRole",
                 "iam:PassRole",
-                "iam:AttachRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:PutRolePolicy",
-                "iam:DeleteRolePolicy"
+                "iam:GetRole"
             ],
-            "Resource": "*"
+            "Resource": "arn:aws:iam::ACCOUNT_ID:role/mintocred-*"
         }
     ]
 }
 ```
 
-### JSON Policy: `GitHubActionsDeployRole` (CI/CD Only)
+### B. JSON Policy: `GitHubActionsDeployRole` (CI/CD Only)
 
-*This policy is strictly for the deployment pipeline, ensuring it can only update code, not destroy infrastructure.*
+*This policy is strictly for the deployment pipeline, scoped to exact resource ARNs.*
 
 ```json
 {
@@ -147,17 +139,12 @@ The following details the services used per account and the exact JSON policy re
                 "ecr:GetAuthorizationToken",
                 "ecr:BatchCheckLayerAvailability",
                 "ecr:GetDownloadUrlForLayer",
-                "ecr:GetRepositoryPolicy",
-                "ecr:DescribeRepositories",
-                "ecr:ListImages",
-                "ecr:DescribeImages",
-                "ecr:BatchGetImage",
                 "ecr:InitiateLayerUpload",
                 "ecr:UploadLayerPart",
                 "ecr:CompleteLayerUpload",
                 "ecr:PutImage"
             ],
-            "Resource": "*"
+            "Resource": "arn:aws:ecr:REGION:ACCOUNT_ID:repository/mintocred-api-repo"
         },
         {
             "Sid": "ECSUpdateService",
@@ -166,7 +153,7 @@ The following details the services used per account and the exact JSON policy re
                 "ecs:UpdateService",
                 "ecs:DescribeServices"
             ],
-            "Resource": "*"
+            "Resource": "arn:aws:ecs:REGION:ACCOUNT_ID:service/mintocred-*/mintocred-api-service"
         },
         {
             "Sid": "S3UploadUI",
@@ -176,7 +163,10 @@ The following details the services used per account and the exact JSON policy re
                 "s3:DeleteObject",
                 "s3:ListBucket"
             ],
-            "Resource": "arn:aws:s3:::mintocred-ui-bucket-name/*"
+            "Resource": [
+                "arn:aws:s3:::mintocred-*-ui-bucket",
+                "arn:aws:s3:::mintocred-*-ui-bucket/*"
+            ]
         },
         {
             "Sid": "CloudFrontInvalidation",
@@ -184,7 +174,7 @@ The following details the services used per account and the exact JSON policy re
             "Action": [
                 "cloudfront:CreateInvalidation"
             ],
-            "Resource": "*"
+            "Resource": "arn:aws:cloudfront::ACCOUNT_ID:distribution/*"
         }
     ]
 }
